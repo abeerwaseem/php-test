@@ -1,4 +1,6 @@
-# TASK 1
+# PHP-TEST
+
+#Task 1
 
 1. Clone the repository in the folder
 2. Rename .env.example file to .env
