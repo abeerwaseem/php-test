@@ -36,19 +36,19 @@ class StudentTest extends TestCase
     public function testShouldReturnStudent(){
         $this->get("students/8", [])
         ->seeStatusCode(200)
-        ->seeJsonEquals([
+        ->seeJsonStructure([
             'data' =>
                 [
-                    'id' => 8,
-                    'Name' => 'Natalie',
-                    'Surname' =>'Kutch',
-                    'IndentificationNo' => 'ST-54602',
-                    'Country' => 'Georgia',
-                    'DateOfBirth' => '1981-10-08 00:00:00',
-                    'RegisteredOn' => '2006-02-18 23:03:48'
+                    'id',
+                    'Name',
+                    'Surname',
+                    'IndentificationNo',
+                    'Country',
+                    'DateOfBirth',
+                    'RegisteredOn'
                 ],
-                'status' => "Success",
-                'message' => null
+                'status'
+                'message'
             ]
         );
 

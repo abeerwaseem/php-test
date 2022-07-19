@@ -15,7 +15,7 @@ class HttpBasicAuth
      */
     public function handle($request, Closure $next)
     {
-        if(app()->environment('production', 'staging')) {
+        if(app()->environment('production', 'staging', 'local')) {
             if($request->getUser() != env('API_USERNAME') && $request->getPassword() != env('API_PASSWORD')) {
                 $headers = array('WWW-Authenticate' => 'Basic');
                 return response('Unauthorized', 401, $headers);

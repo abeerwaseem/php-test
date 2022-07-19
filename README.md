@@ -3,10 +3,11 @@
 ##Task 1
 
 1. Clone the repository in the folder
-2. Rename .env.example file to .env
-3. Add Database details in .env file
-4. run php artisan:migrate --seed
-5. This application uses HTTP Basic Auth, to authenticate the api calls add API_USERNAME = test and API_PASSWORD = test in .env file
+2. Run Composer install.
+3. Rename .env.example file to .env
+4. Add Database details in .env file
+5. run php artisan migrate --seed
+6. This application uses HTTP Basic Auth, to authenticate the api calls add API_USERNAME = test and API_PASSWORD = test in .env file
 
 Endpoints:
 
