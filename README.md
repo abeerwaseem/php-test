@@ -8,6 +8,8 @@
 4. Add Database details in .env file
 5. run php artisan migrate --seed
 6. This application uses HTTP Basic Auth, to authenticate the api calls add API_USERNAME = test and API_PASSWORD = test in .env file
+7. PHP Unit test are included.
+
 
 Endpoints:
 

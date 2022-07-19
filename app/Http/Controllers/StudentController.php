@@ -82,7 +82,7 @@ class StudentController extends Controller
      * Update a student.
      *
      * @param  Illuminate\Http\Request $request
-     * @param  App\Models\Student  $student
+     * @param  String  $student
      * @return App\Traits\ApiResponser
      */
     public function update(Request $request, $id)
