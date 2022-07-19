@@ -1,24 +1,43 @@
-# Lumen PHP Framework
+# PHP-TEST
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+##Task 1
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+1. Clone the repository in the folder
+2. Rename .env.example file to .env
+3. Add Database details in .env file
+4. run php artisan:migrate --seed
+5. This application uses HTTP Basic Auth, to authenticate the api calls add API_USERNAME = test and API_PASSWORD = test in .env file
 
-## Official Documentation
+Endpoints:
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+To fetch student lists:
 
-## Contributing
+GET - /students
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Single Student Details:
 
-## Security Vulnerabilities
+GET - /students/{id} (where id is from student table column "id")
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Create student:
 
-## License
+POST - /students
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Update student:
+
+POST - /students/{id} (where id is from student table column "id")
+
+
+##Task 2
+
+1. ADD CE_URL = https://v6.exchangerate-api.com/v6/40a4ad45c14352d573633789/latest and CE_BASE_CURRENCY = EUR in .env file.
+
+Endpoints:
+
+To update Exchange rate list:
+
+GET - /update-currency-rates
+
+To get latest echange rate list:
+
+GET - /currency-rates
+
